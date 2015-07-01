@@ -1,0 +1,300 @@
+<h1>New Crop</h1>
+
+
+<div class="menu">
+
+    <div class="module">
+      <div class="panel">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1">Load pictures</a>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content">
+          <div class="cnt">
+            <a href="#" id="load-file-from-computer" class="btn">From computer</a>
+            <a href="#" id="load-file-from-url" class="btn">From URL</a>
+            <input type="file" id="input-file" class="hidden">
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1">Resize</a>
+          </li>
+          <li>
+            <a href="#2">Fit</a>
+          </li>
+          <li>
+            <a href="#3">Rotate / flip</a>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content">
+          <div class="cnt">
+            <div class="row mb0">
+              <input type="text" name="" id="" placeholder="width" class="mr2">
+              <input type="button" value="-" class="btn mr2">
+              <input type="text" name="" id="" placeholder="height">
+              <input class="btn" type="button" value="RESIZE">
+              <label class="mt16">
+                <input type="checkbox" name="" id="" checked>
+                Constrain proportions
+              </label>
+            </div>
+          </div>
+          <div class="cnt">
+            <div class="row">
+              <select name="din" id="">
+                <option value="">640 x 480&nbsp;&nbsp;</option>
+                <option value="">800 x 600&nbsp;&nbsp;</option>
+                <option value="">1024 x 768&nbsp;&nbsp;</option>
+                <option value="">1920 x 1080&nbsp;&nbsp;</option>
+              </select>
+              <input class="btn" type="button" value="FIT">
+            </div>
+            <hr>
+            <div class="row">
+              <p class="mb4">Enter your custom values</p>
+              <input type="text" name="" id="" placeholder="width">
+              <input type="text" name="" id="" placeholder="height">
+              <input class="btn" type="button" value="FIT">
+            </div>
+          </div>
+          <div class="cnt">
+            <div class="row">
+              <input class="btn" type="button" value="Rotate 90º CW" id="fn-rotate-90CW">
+              <input class="btn" type="button" value="Rotate 90º CCW" id="fn-rotate-90CCW">
+            </div>
+            <hr>
+            <div class="row">
+              <input class="btn" type="button" value="Flip horizontal" id="fn-flip-H">
+              <input class="btn" type="button" value="Flip vertical" id="fn-flip-V">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1">Crop</a>
+          </li>
+          <li>
+            <a href="#2">Crop areas</a>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content">
+          <div class="cnt">
+            <div class="row mb0">
+              <input type="text" name="" id="" placeholder="width" class="mr2">
+              <input type="button" value="-" class="btn mr2">
+              <input type="text" name="" id="" placeholder="height">
+              <input class="btn" type="button" value="ADD CROP">
+              <label class="mt16">
+                <input type="checkbox" name="" id="" checked>
+                Constrain proportions
+              </label>
+            </div>
+            <hr>
+            <div class="row">
+              <p class="mt0 mb8">Common aspect ratios in photography</p>
+              <input class="btn mr4" type="button" value="16:9">
+              <input class="btn mr4" type="button" value="5:3">
+              <input class="btn mr4" type="button" value="4:3">
+              <input class="btn mr4" type="button" value="3:2">
+              <input class="btn mr4" type="button" value="3:1">
+              <input class="btn" type="button" value="2:1">
+              <input class="btn checked m0 checkable" type="button" value="W:H">
+            </div>
+            <div class="row">
+              <select name="din" id="">
+                <option value="">Common aspect ratios in films&nbsp;&nbsp;</option>
+                <option value="">1.66:1&nbsp;&nbsp;</option>
+                <option value="">1.78:1 - 16:9&nbsp;&nbsp;</option>
+                <option value="">1.85:1&nbsp;&nbsp;</option>
+                <option value="">2.39:1&nbsp;&nbsp;</option>
+                <option value="">2.75:1&nbsp;&nbsp;</option>
+                <option value="">4:1&nbsp;&nbsp;</option>
+              </select>
+            </div>
+          </div>
+          <div class="cnt">
+            <ul class="item-list mb8">
+              <li>
+                <div class="swatch"></div>
+                <span class="size"><a href=""><b>01</b> | 150:300</a></span>
+                <input type="button" value="X" title="Delete crop" class="btn small right del">
+              </li>
+              <li>
+                <div class="swatch"></div>
+                <span class="size"><a href=""><b>02</b> | 150:300</a></span>
+                <input type="button" value="X" title="Delete crop" class="btn small right del">
+              </li>
+              <li>
+                <div class="swatch"></div>
+                <span class="size"><b>03</b> | 150:300</span>
+                <input type="button" value="X" title="Delete crop" class="btn small right del">
+              </li>
+            </ul>
+            <a href="#" class="btn right m0">Delete all</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1">Filters</a>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content pb8">
+          <div class="cnt">
+            <label>
+              <input type="checkbox" id="fltr-sharpen" name="sharpen" checked value="1"> Sharpen
+            </label>
+            <label>
+              <input type="checkbox" id="fltr-greyscale" name="greyscale" value="1"> Greyscale
+            </label>
+            <label>
+              <input type="checkbox" id="fltr-autolevels" name="Autolevels" value="1"> Autolevels
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1">Create all images</a>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content">
+          <div class="cnt">
+            <input id="master-crop" class="btn mr4 big red" type="button" value="Crop all areas in image">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel closed">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1">Pictures info</a>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content">
+          <div class="cnt">
+            <canvas id="buffer"></canvas>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="work-area">
+
+    <!-- <div class="module ban-t">
+      <a href="#">
+        <img src="/img/adsense/adsense_185665_adformat-text_728x90_en.png" alt="">
+      </a>
+    </div> -->
+
+    <div class="module">
+      <div class="panel">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1"><b>1</b></a><span class="ext-title">Original size --- x ---</span>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content p0">
+          <div class="cnt">
+            <div class="crop-container">
+              <%= image_tag @image.file.url, id: 'src' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="right-column">
+
+    <!-- <div class="module add-this">
+      <div class="addthis_toolbox addthis_default_style ">
+        <a class="addthis_button_preferred_1"></a>
+        <a class="addthis_button_preferred_2"></a>
+        <a class="addthis_button_preferred_3"></a>
+        <a class="addthis_button_preferred_4"></a>
+        <a class="addthis_button_compact"></a>
+        <a class="addthis_counter addthis_bubble_style"></a>
+      </div>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-529249843fff5cc2"></script>
+    </div> -->
+
+    <div class="module">
+      <div class="panel">
+        <ul class="tabs">
+          <li class="active">
+            <a href="#1">Resulting images</a>
+          </li>
+          <li>
+            <a href="#2">Help</a>
+          </li>
+          <li>
+            <a href="#3">Log</a>
+          </li>
+          <li class="close-panel">
+            <a href="#"><span class="arrow-up">&#9650;</span><span class="arrow-down">&#9660;</span></a>
+          </li>
+        </ul>
+        <div class="content">
+          <div class="cnt p0">
+            <div class="cnt">
+              <input type="button" value="Save all as ZIP" title="Save all as ZIP" class="btn">
+              <input id="delete-all-crops" type="button" value="Delete all" title="Delete all crops" class="btn">
+            </div>
+            <hr>
+            <p class="intro">Resulting images will be displayed here...</p>
+            <div class="resulting-crops"></div>
+          </div>
+          <div class="cnt">
+            Help videos
+          </div>
+          <div class="cnt">
+            <textarea name="log" id="log"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
