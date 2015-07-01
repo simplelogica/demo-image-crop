@@ -10,7 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require libs/jquery-1.9.1.min
+//= require libs/jquery-ui-1.10.3.custom.min
+//= require libs/jquery.color-2.1.2.min
+//= require image_crop/UI.panel.js
+//= require image_crop/filters.js
+//= require image_crop/imagecrop.js
+//= require image_crop/ready.js
 //= require_tree .
