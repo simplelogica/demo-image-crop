@@ -1,2 +1,17 @@
-<h1>Pages#edit</h1>
-<p>Find me in app/views/pages/edit.html.erb</p>
+<h1>Edit <%= @page.title %></h1>
+
+<h2>Logo</h2>
+
+<%= image_tag @page.logo %>
+<%= link_to "New crop", edit_page_page_crop_path(@page, :logo)%>
+
+<h2>Header</h2>
+
+<%= image_tag @page.header_crop %>
+<%= link_to "New crop", edit_page_page_crop_path(@page, :header_crop)%>
+
+<h2>Sidebar</h2>
+
+<%= image_tag @page.sidebar_crop %>
+<%= link_to "New crop", edit_page_page_crop_path(@page, :sidebar_crop)%>
+
