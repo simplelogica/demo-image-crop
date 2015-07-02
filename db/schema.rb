@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701151033) do
+ActiveRecord::Schema.define(version: 20150702130128) do
 
   create_table "image_crops", force: :cascade do |t|
     t.integer  "image_id"
@@ -25,5 +25,18 @@ ActiveRecord::Schema.define(version: 20150701151033) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "header_crop_id"
+    t.integer  "sidebar_crop_id"
+    t.integer  "logo_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "pages", ["header_crop_id"], name: "index_pages_on_header_crop_id"
+  add_index "pages", ["logo_id"], name: "index_pages_on_logo_id"
+  add_index "pages", ["sidebar_crop_id"], name: "index_pages_on_sidebar_crop_id"
 
 end
