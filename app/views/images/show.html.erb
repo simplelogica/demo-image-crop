@@ -1,3 +1,9 @@
 <h1>Image <%= @image.id %> </h1>
 
 <%= image_tag @image.file.url %>
+
+<h2>Crops</h2>
+
+<% @image.crops.each do |crop| %>
+  <%= image_tag crop.file.url %>
+<% end -%>
