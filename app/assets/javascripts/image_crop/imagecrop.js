@@ -11,6 +11,7 @@ var IC = {
   crops: null,
   log: $('textarea#log'),
   re: $('.resulting-crops'),
+  crops_form: $('.resulting-crops').find('> form#new_image_crop'),
   buffer: null,
   bu_ctx: null,
 
@@ -20,6 +21,7 @@ var IC = {
     this.cont = $('.crop-container');
     this.img_ = $('.crop-container').find('> img');
     this.re = $('.resulting-crops');
+    this.crops_form = $('.resulting-crops').find('> form#new_image_crop');
 
     // Add cropmarks
     if (this.cma.length > 0) {
@@ -127,8 +129,8 @@ var IC = {
         sh = 0,
         sx = 0,
         sy = 0,
-        parent_x = IC.cont.position().left,
-        parent_y = IC.cont.position().top,
+        parent_x = parseInt(IC.cont.css('padding-left'), 10),
+        parent_y = parseInt(IC.cont.css('padding-top'), 10),
         $i = $(item),
         dw = parseInt($i.data('w'), 10),
         dh = parseInt($i.data('h'), 10),
@@ -145,11 +147,15 @@ var IC = {
 
       // Create crops
       $('<div class="result-crop"><canvas id="cnv-'+id+'">&nbsp;</canvas><a href="#" id="dwn-'+id+'" class="btn dwn-link" download="crop-'+idx+'.jpg" title="Click to download this crop as JPEG">SAVE JPEG</a><a href="#" class="btn btn-close">X</a></div>').appendTo(IC.re);
+
       $('#cnv-'+id)[0].width = dw;
       $('#cnv-'+id)[0].height = dh;
 
-      var ctx = $('#cnv-'+id)[0].getContext('2d');
+      var cnv = $('#cnv-'+id)[0],
+        ctx = $('#cnv-'+id)[0].getContext('2d');
       ctx.drawImage($('#src')[0], sx, sy, sw, sh, 0, 0, dw, dh);
+
+      $('<input type="hidden" name="image_crop[][file]" value="'+cnv.toDataURL('image/jpeg')+'" />').appendTo(IC.crops_form);
       // ctx.drawImage($('#buffer')[0], sx, sy, sw, sh, 0, 0, dw, dh);
 
       // Filter the crops

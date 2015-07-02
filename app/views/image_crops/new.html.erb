@@ -71,8 +71,15 @@
               <input id="delete-all-crops" type="button" value="Delete all" title="Delete all crops" class="btn">
             </div>
             <hr>
+
+            <input id="master-crop" class="btn mr4 big red" type="button" value="Crop all areas in image">
+            <br/>
             <p class="intro">Resulting images will be displayed here...</p>
-            <div class="resulting-crops"></div>
+            <div class="resulting-crops">
+              <%= form_for [@image, @crop], id: 'crops-values' do |f| %>
+                <%= f.submit "Upload crops" %>
+              <% end -%>
+            </div>
           </div>
           <div class="cnt">
             Help videos
