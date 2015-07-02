@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-
   resources :images, only: [:new, :create, :show] do
     resources :image_crops, only: [:new, :create]
   end
+
+  resources :pages, only: [:new, :create, :edit]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
