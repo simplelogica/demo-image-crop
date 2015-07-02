@@ -152,7 +152,7 @@ var IC = {
       $('#cnv-'+id)[0].height = dh;
 
       var cnv = $('#cnv-'+id)[0],
-        ctx = $('#cnv-'+id)[0].getContext('2d');
+        ctx = cnv.getContext('2d');
       ctx.drawImage($('#src')[0], sx, sy, sw, sh, 0, 0, dw, dh);
 
       $('<input type="hidden" name="image_crop[][file]" value="'+cnv.toDataURL('image/jpeg')+'" />').appendTo(IC.crops_form);
