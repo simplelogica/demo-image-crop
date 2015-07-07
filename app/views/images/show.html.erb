@@ -2,7 +2,11 @@
 
 <%= image_tag @image.file.url %>
 
-<h2>Crops</h2>
+<h2>Recortes</h2>
+
+<p>
+  <%= link_to 'Nuevo recorte', new_image_image_crop_path(@image) %>
+</p>
 
 <% @image.crops.each do |crop| %>
   <%= image_tag crop.file %>
