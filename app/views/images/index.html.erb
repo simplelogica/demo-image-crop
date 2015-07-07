@@ -1,0 +1,7 @@
+<h1>Imágenes</h1>
+
+<ul>
+  <% @images.each do |image| %>
+    <li><%= link_to image_tag( image.file, width: "240px"), image %></li>
+  <% end -%>
+</ul>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :images, only: [:new, :create, :show] do
+  resources :images, only: [:index, :new, :create, :show] do
     resources :image_crops, only: [:new, :create]
   end
 
